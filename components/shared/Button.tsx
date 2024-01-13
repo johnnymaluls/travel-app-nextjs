@@ -7,16 +7,21 @@ interface Props {
   text: string;
   icon?: string; //optional property
   variant: string;
+  full?: boolean;
 }
 
-const Button = ({ type, text, icon, variant }: Props) => {
+const Button = ({ type, text, icon, variant, full }: Props) => {
   return (
     <button
       type={type}
-      className={`flex items-center justify-center gap-3 rounded-full border ${variant} `}
+      className={`flex items-center justify-center gap-3 rounded-full border ${variant} ${
+        full && "w-full"
+      }`}
     >
       {icon && <Image src={icon} alt={title} width={24} height={24} />}
-      <label className="text-base font-bold whitespace-nowrap">{text}</label>
+      <label className="text-base font-bold whitespace-nowrap cursor-pointer">
+        {text}
+      </label>
     </button>
   );
 };

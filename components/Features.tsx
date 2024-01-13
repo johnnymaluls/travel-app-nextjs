@@ -33,7 +33,7 @@ const Features = () => {
             alt="phone"
             width={440}
             height={1000}
-            className="feature-phone"
+            className="absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex  3xl:left-20"
           />
         </div>
         <div className="z-20 flex w-full flex-col lg:w-[60%]">
